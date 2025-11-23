@@ -1,0 +1,38 @@
+:root{
+  --bg:#f7f8fb;
+  --card:#ffffff;
+  --accent:#2b7be4;
+  --muted:#666;
+  --danger:#e04b4b;
+  --gap:12px;
+}
+*{box-sizing:border-box}
+body{font-family:system-ui,Segoe UI,Roboto,Arial, sans-serif;background:var(--bg);color:#111;margin:0;padding:24px}
+.container{max-width:900px;margin:0 auto;background:var(--card);padding:20px;border-radius:8px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+h1{margin:0 0 12px;font-size:1.4rem}
+.tabs{display:flex;gap:8px;margin-bottom:16px}
+.tab-btn{background:transparent;border:1px solid #ddd;padding:8px 12px;border-radius:6px;cursor:pointer}
+.tab-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.tab-panel{margin-top:6px}
+table.entries{width:100%;border-collapse:collapse;margin-bottom:8px}
+table.entries thead th{background:#fafafa;text-align:left;padding:8px;border-bottom:1px solid #eee;font-weight:600}
+table.entries td{padding:8px;border-bottom:1px solid #f2f2f2}
+input[type="text"],input[type="number"],input[type="date"]{width:100%;padding:6px;border:1px solid #ddd;border-radius:4px}
+.controls{display:flex;gap:8px;justify-content:flex-start}
+.add-row{background:var(--accent);color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.delete-row{background:transparent;color:var(--danger);border:1px solid #f5c6c6;padding:6px 10px;border-radius:6px;cursor:pointer}
+.small{font-size:.9rem;color:var(--muted)}
+
+.save-tab{background:#28a745;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.load-tab{background:#6c757d;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.export-json{background:#1e90ff;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.export-csv{background:#17a2b8;color:#fff;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+.import-tab{background:#ffc107;color:#111;border:none;padding:8px 12px;border-radius:6px;cursor:pointer}
+
+.total-row{display:flex;justify-content:flex-end;align-items:center;gap:8px;margin-bottom:8px;font-weight:600}
+.total-amount{background:#f3f7ff;padding:6px 10px;border-radius:6px;border:1px solid #e6eefc;min-width:90px;text-align:center}
+
+@media (max-width:600px){
+  .container{padding:12px}
+  .tabs{flex-wrap:wrap}
+}

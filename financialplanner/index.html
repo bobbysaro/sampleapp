@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Financial Planner</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Financial Planner</h1>
+
+      <nav class="tabs" role="tablist" aria-label="Sections">
+        <button class="tab-btn active" data-tab="income" role="tab" aria-selected="true">Income</button>
+        <button class="tab-btn" data-tab="utilities" role="tab">Utilities</button>
+        <button class="tab-btn" data-tab="bills" role="tab">Bills</button>
+      </nav>
+
+      <section id="income" class="tab-panel">
+        <h2>Income</h2>
+        <table class="entries">
+          <thead>
+            <tr>
+              <th>Source</th>
+              <th>Amount</th>
+              <th>Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- initial row created by JS for consistency -->
+          </tbody>
+        </table>
+        <div class="total-row">
+          <strong>Total:</strong>
+          <span class="total-amount" data-for="income">$0.00</span>
+        </div>
+        <div class="controls">
+          <button class="add-row" data-target="income">Add Income Row</button>
+          <button class="save-tab" data-target="income">Save Income</button>
+          <button class="load-tab" data-target="income">Load Income</button>
+          <button class="export-json" data-target="income">Export JSON</button>
+          <button class="export-csv" data-target="income">Export CSV</button>
+          <button class="import-tab" data-target="income">Import</button>
+          <input class="import-file" data-target="income" type="file" accept=".json,.csv" hidden />
+        </div>
+      </section>
+
+      <section id="utilities" class="tab-panel" hidden>
+        <h2>Utilities</h2>
+        <table class="entries">
+          <thead>
+            <tr>
+              <th>Utility</th>
+              <th>Amount</th>
+              <th>Due Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="total-row">
+          <strong>Total:</strong>
+          <span class="total-amount" data-for="utilities">$0.00</span>
+        </div>
+        <div class="controls">
+          <button class="add-row" data-target="utilities">Add Utility Row</button>
+          <button class="save-tab" data-target="utilities">Save Utilities</button>
+          <button class="load-tab" data-target="utilities">Load Utilities</button>
+          <button class="export-json" data-target="utilities">Export JSON</button>
+          <button class="export-csv" data-target="utilities">Export CSV</button>
+          <button class="import-tab" data-target="utilities">Import</button>
+          <input class="import-file" data-target="utilities" type="file" accept=".json,.csv" hidden />
+        </div>
+      </section>
+
+      <section id="bills" class="tab-panel" hidden>
+        <h2>Bills</h2>
+        <table class="entries">
+          <thead>
+            <tr>
+              <th>Bill</th>
+              <th>Amount</th>
+              <th>Balance</th>
+              <th>Due Date</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="total-row">
+          <strong>Amount Total:</strong>
+          <span class="total-amount" data-for="bills">$0.00</span>
+          <strong>Balance Total:</strong>
+          <span class="total-amount" data-for="bills-balance">$0.00</span>
+        </div>
+        <div class="controls">
+          <button class="add-row" data-target="bills">Add Bill Row</button>
+          <button class="save-tab" data-target="bills">Save Bills</button>
+          <button class="load-tab" data-target="bills">Load Bills</button>
+          <button class="export-json" data-target="bills">Export JSON</button>
+          <button class="export-csv" data-target="bills">Export CSV</button>
+          <button class="import-tab" data-target="bills">Import</button>
+          <input class="import-file" data-target="bills" type="file" accept=".json,.csv" hidden />
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
